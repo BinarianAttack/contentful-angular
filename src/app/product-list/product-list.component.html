@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="title-container" >
+    <h1 class="title"> Products </h1>
+  </div>
+  <div class="product-grid" *ngFor="let product of products">
+    <h3 class="product-title"> {{ product.fields.productName }} </h3>
+    <h4 class="product-price"> Price: {{ product.fields.price }} </h4>
+    <img class="product-image" src="{{ product.fields.image[0].fields.file.url }}" />
+    <hr>
+    <div class="product-details">
+      <p> {{ product.fields.productDescription }} </p>
+    </div>
+  </div>
+</div>
